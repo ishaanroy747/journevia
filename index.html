@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Journevia | Travel Guides, Visa Information & Travel Tips</title>
+
+    <meta name="description" content="Explore practical travel guides, tourist visa information, destination tips, itineraries and useful resources for planning your next journey.">
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fff;
+        }
+
+        header {
+            padding: 18px 7%;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        nav a {
+            margin-left: 22px;
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #087f8c;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 7%;
+            color: #fff;
+
+            background:
+                linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)),
+                url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.12;
+            margin: 0 0 22px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 720px;
+            margin: auto;
+        }
+
+        .hero-buttons {
+            margin-top: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            margin: 5px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #087f8c;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #222;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            padding: 75px 7%;
+        }
+
+        .section-heading {
+            max-width: 750px;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #666;
+        }
+
+        /* RESOURCE CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: #fff;
+        }
+
+        .card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* FEATURED SECTION */
+
+        .featured {
+            background: #f5f8f9;
+        }
+
+        .featured-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .featured-text h2 {
+            font-size: 34px;
+        }
+
+        .featured-text p {
+            color: #555;
+        }
+
+        /* BLOGS */
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .article-card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .article-label {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .article-card h2 {
+            margin: 8px 0 14px;
+            font-size: 21px;
+            line-height: 1.35;
+        }
+
+        .article-card h2 a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .article-card h2 a:hover {
+            color: #087f8c;
+        }
+
+        .article-card p {
+            color: #555;
+        }
+
+        .read-more {
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 80px 7%;
+            text-align: center;
+            color: #fff;
+
+            background:
+                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+        }
+
+        .cta h2 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 7%;
+            text-align: center;
+            background: #202020;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .cards,
+            .blog-grid,
+            .featured-content {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image img {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero {
+                min-height: 500px;
+                padding: 60px 6%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 55px 6%;
+            }
+
+            .section-heading h2,
+            .featured-text h2,
+            .cta h2 {
+                font-size: 28px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <h2>Journevia</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Explore the World with Better Travel Information</h1>
+
+        <p>
+            Discover destination guides, tourist visa information,
+            travel tips, itinerary ideas and practical resources
+            to help you plan your next journey.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="blogs.html" class="btn btn-primary">
+                Explore Travel Guides
+            </a>
+
+            <a href="services.html" class="btn btn-secondary">
+                Explore Resources
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRAVEL RESOURCES -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <h2>Explore Travel Resources</h2>
+
+        <p>
+            Find useful information to help you research destinations,
+            understand visa requirements and prepare for your journey.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- DESTINATION -->
+
+        <div class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80"
+                alt="Paris travel destination">
+
+            <div class="card-content">
+
+                <h3>Destination Guides</h3>
+
+                <p>
+                    Explore destinations, attractions, travel seasons,
+                    local experiences and practical planning information.
+                </p>
+
+                <a href="services.html">
+                    Explore Destination Guides →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- VISA -->
+
+        <div class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1548777123-e216912df7d8?auto=format&fit=crop&w=900&q=80"
+                alt="Travel documents and passport">
+
+            <div class="card-content">
+
+                <h3>Tourist Visa Information</h3>
+
+                <p>
+                    Learn about tourist visa requirements, documents,
+                    application processes and international travel considerations.
+                </p>
+
+                <a href="services.html">
+                    Explore Visa Resources →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRAVEL PLANNING -->
+
+        <div class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80"
+                alt="Airplane flying for travel">
+
+            <div class="card-content">
+
+                <h3>Travel Planning</h3>
+
+                <p>
+                    Discover itinerary ideas, transportation tips,
+                    accommodation considerations and trip-planning advice.
+                </p>
+
+                <a href="services.html">
+                    Explore Travel Planning →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED -->
+
+<section class="section featured">
+
+    <div class="featured-content">
+
+        <div class="featured-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85"
+                alt="Traveler exploring a new destination">
+
+        </div>
+
+
+        <div class="featured-text">
+
+            <h2>Make Travel Planning Simpler</h2>
+
+            <p>
+                Planning an international journey involves more than
+                choosing a destination. Understanding visa requirements,
+                travel seasons, transportation and local experiences
+                can make preparation much easier.
+            </p>
+
+            <p>
+                Journevia brings these useful travel topics together
+                so travelers can research their trips from one place.
+            </p>
+
+            <a href="about.html" class="btn btn-primary">
+                Learn More About Journevia
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LATEST BLOGS -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <h2>Latest Travel Blogs</h2>
+
+        <p>
+            Read our latest guides covering tourist visas,
+            destinations and practical travel planning topics.
+        </p>
+
+    </div>
+
+
+    <div class="blog-grid">
+
+
+        <!-- CHINA -->
+
+        <article class="article-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=900&q=80"
+                alt="China travel destination">
+
+            <div class="article-content">
+
+                <span class="article-label">
+                    China Visa Guide
+                </span>
+
+                <h2>
+                    <a href="blogs/china-tourist-visa-for-indians-september-2026.html">
+                        China Tourist Visa for Indians: Planning China in September 2026? Read This First
+                    </a>
+                </h2>
+
+                <p>
+                    Learn about the China Tourist Visa for Indians,
+                    application process, documents, timing and travel tips.
+                </p>
+
+                <a class="read-more"
+                   href="blogs/china-tourist-visa-for-indians-september-2026.html">
+                    Read the Full Article →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- DUBAI -->
+
+        <article class="article-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+                alt="Dubai skyline">
+
+            <div class="article-content">
+
+                <span class="article-label">
+                    Dubai Visa Guide
+                </span>
+
+                <h2>
+                    <a href="blogs/30-or-60-days-dubai-visa.html">
+                        30 or 60 Days in Dubai: Which Visa Makes More Sense for Your Trip?
+                    </a>
+                </h2>
+
+                <p>
+                    Compare 30-day and 60-day Dubai visa options,
+                    entry types, documents and travel considerations.
+                </p>
+
+                <a class="read-more"
+                   href="blogs/30-or-60-days-dubai-visa.html">
+                    Read the Full Article →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- AZERBAIJAN -->
+
+        <article class="article-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=80"
+                alt="Azerbaijan travel landscape">
+
+            <div class="article-content">
+
+                <span class="article-label">
+                    Azerbaijan Visa Guide
+                </span>
+
+                <h2>
+                    <a href="blogs/azerbaijan-tourist-visa-for-indians-september-2026.html">
+                        Do Indians Need a Tourist Visa for Azerbaijan in September 2026?
+                    </a>
+                </h2>
+
+                <p>
+                    Find out about Azerbaijan tourist visa requirements,
+                    documents, application steps and travel planning tips.
+                </p>
+
+                <a class="read-more"
+                   href="blogs/azerbaijan-tourist-visa-for-indians-september-2026.html">
+                    Read the Full Article →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <div style="margin-top:35px;">
+
+        <a href="blogs.html" class="btn btn-primary">
+            View All Travel Blogs →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>Start Exploring Your Next Journey</h2>
+
+    <p>
+        Discover travel guides, visa information, destination ideas
+        and practical tips to help you prepare for your next adventure.
+    </p>
+
+    <a href="blogs.html" class="btn btn-secondary">
+        Explore Journevia
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Journevia. All rights reserved.
+    </p>
+
+    <p>
+        Travel Guides • Visa Information • Destination Tips
+    </p>
+
+</footer>
+
+</body>
+</html>
