@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Blogs & Guides | Journevia</title>
+
+    <meta name="description" content="Explore travel guides, destination information, tourist visa resources, itineraries and practical travel tips from Journevia.">
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fff;
+        }
+
+        header {
+            padding: 18px 7%;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        nav a {
+            margin-left: 22px;
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #087f8c;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 7%;
+            color: #fff;
+
+            background:
+                linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin: 0 0 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: auto;
+        }
+
+        /* BLOG SECTION */
+
+        .blog-section {
+            padding: 80px 7%;
+        }
+
+        .blog-container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .blog-container h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .blog-container p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .coming-soon {
+            margin-top: 40px;
+            padding: 50px 30px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: #f7f9fa;
+        }
+
+        .coming-soon h3 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .coming-soon p {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 80px 7%;
+            text-align: center;
+            color: #fff;
+
+            background:
+                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+        }
+
+        .cta h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .btn-primary {
+            background: #087f8c;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #222;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 7%;
+            text-align: center;
+            background: #202020;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero {
+                min-height: 380px;
+                padding: 60px 6%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .blog-section {
+                padding: 55px 6%;
+            }
+
+            .blog-container h2,
+            .cta h2 {
+                font-size: 28px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <h2>Journevia</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Travel Blogs & Guides</h1>
+
+        <p>
+            Discover travel information, destination guides,
+            visa resources, itinerary ideas and practical
+            tips for your next journey.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- BLOG AREA -->
+
+<section class="blog-section">
+
+    <div class="blog-container">
+
+        <h2>Latest Travel Articles</h2>
+
+        <p>
+            Our travel articles will cover destinations,
+            tourist visa information, trip planning,
+            itineraries and useful travel tips.
+        </p>
+
+
+        <div class="coming-soon">
+
+            <h3>Travel Articles Coming Soon</h3>
+
+            <p>
+                We are preparing useful travel guides and
+                destination resources. New articles will be
+                added here soon.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>Planning Your Next Journey?</h2>
+
+    <p>
+        Explore our travel resources and discover useful
+        information for your next trip.
+    </p>
+
+    <a href="services.html" class="btn btn-primary">
+        Explore Services
+    </a>
+
+    <a href="index.html" class="btn btn-secondary">
+        Back to Home
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Journevia. All rights reserved.
+    </p>
+
+    <p>
+        Travel Guides • Visa Information • Destination Tips
+    </p>
+
+</footer>
+
+</body>
+</html>
