@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Journevia | Travel Guides & Information</title>
+
+    <meta name="description" content="Learn about Journevia, a travel information website providing destination guides, tourist visa information, travel tips and practical resources for travelers.">
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fff;
+        }
+
+        header {
+            padding: 18px 7%;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        nav a {
+            margin-left: 22px;
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #087f8c;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 7%;
+            color: #fff;
+
+            background:
+                linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)),
+                url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin: 0 0 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: auto;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            padding: 75px 7%;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .content-text h2 {
+            font-size: 34px;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .content-text p {
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        /* VALUES */
+
+        .light-section {
+            background: #f5f8f9;
+        }
+
+        .section-heading {
+            max-width: 750px;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #666;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            padding: 28px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: #fff;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 80px 7%;
+            text-align: center;
+            color: #fff;
+
+            background:
+                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+        }
+
+        .cta h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .btn-primary {
+            background: #087f8c;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #222;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 7%;
+            text-align: center;
+            background: #202020;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .content-grid,
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .content-image img {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero {
+                min-height: 380px;
+                padding: 60px 6%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 55px 6%;
+            }
+
+            .section-heading h2,
+            .content-text h2,
+            .cta h2 {
+                font-size: 28px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <h2>Journevia</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>About Journevia</h1>
+
+        <p>
+            Practical travel information, destination guides and
+            useful resources to help make travel planning simpler.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT JOURNEVIA -->
+
+<section class="section">
+
+    <div class="content-grid">
+
+        <div class="content-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=85"
+                alt="Travelers exploring a destination">
+
+        </div>
+
+
+        <div class="content-text">
+
+            <h2>What Is Journevia?</h2>
+
+            <p>
+                Journevia is a travel information website created to
+                make travel research easier and more accessible.
+            </p>
+
+            <p>
+                We bring together practical information about
+                destinations, tourist visas, travel planning,
+                itineraries and useful travel tips.
+            </p>
+
+            <p>
+                Whether you are researching your next destination,
+                checking visa-related information or looking for
+                ideas for your itinerary, Journevia is designed to
+                help you find useful information in one place.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OUR APPROACH -->
+
+<section class="section light-section">
+
+    <div class="section-heading">
+
+        <h2>Our Approach to Travel Information</h2>
+
+        <p>
+            Travel planning involves many decisions. Our goal is to
+            organize useful topics into simple, easy-to-understand
+            resources.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Practical Guides</h3>
+
+            <p>
+                We focus on useful travel information that can help
+                travelers research destinations and prepare for trips.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Clear Information</h3>
+
+            <p>
+                Travel topics are presented in a straightforward
+                format so important details are easier to understand.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Traveler Focused</h3>
+
+            <p>
+                Our content is created around common questions and
+                planning needs travelers may have before a journey.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHAT WE COVER -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <h2>What You Can Explore</h2>
+
+        <p>
+            Journevia covers different areas of travel research
+            and trip preparation.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Destination Guides</h3>
+
+            <p>
+                Explore information about destinations, attractions,
+                travel seasons and local experiences.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Tourist Visa Information</h3>
+
+            <p>
+                Learn about visa-related topics, documentation,
+                application processes and travel considerations.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Travel Tips & Itineraries</h3>
+
+            <p>
+                Find itinerary ideas, transportation information,
+                planning tips and other useful travel resources.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>Start Exploring Journevia</h2>
+
+    <p>
+        Discover travel guides, visa information, destination
+        resources and practical tips for your next journey.
+    </p>
+
+    <a href="blogs.html" class="btn btn-primary">
+        Explore Travel Blogs
+    </a>
+
+    <a href="services.html" class="btn btn-secondary">
+        View Travel Resources
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Journevia. All rights reserved.
+    </p>
+
+    <p>
+        Travel Guides • Visa Information • Destination Tips
+    </p>
+
+</footer>
+
+</body>
+</html>
