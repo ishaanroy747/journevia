@@ -11,227 +11,340 @@
     <meta name="robots" content="index, follow">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #222;
-            background: #fff;
-        }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #222;
+        background: #fff;
+    }
 
-        header {
-            padding: 18px 7%;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    header {
+        padding: 18px 7%;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 
-        header h2 {
-            margin: 0;
-            font-size: 25px;
-        }
+    header h2 {
+        margin: 0;
+        font-size: 25px;
+    }
 
-        nav a {
-            margin-left: 22px;
-            text-decoration: none;
-            color: #222;
-            font-weight: 600;
-        }
+    nav a {
+        margin-left: 22px;
+        text-decoration: none;
+        color: #222;
+        font-weight: 600;
+        transition: color 0.2s ease;
+    }
 
-        nav a:hover {
-            color: #087f8c;
-        }
+    nav a:hover {
+        color: #087f8c;
+    }
 
-        /* HERO */
 
-        .hero {
-            min-height: 430px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 70px 7%;
-            color: #fff;
+    /* =========================
+       HERO
+    ========================= */
 
-            background:
-                linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
-                center/cover no-repeat;
-        }
+    .hero {
+        min-height: 430px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 70px 7%;
+        color: #fff;
 
-        .hero-content {
-            max-width: 800px;
+        background:
+            linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+            url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
+            center/cover no-repeat;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        line-height: 1.15;
+        margin: 0 0 18px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin: auto;
+    }
+
+
+    /* =========================
+       BLOG SECTION
+    ========================= */
+
+    .blog-section {
+        padding: 80px 7%;
+        background: #fff;
+    }
+
+    .blog-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .blog-container > h2 {
+        text-align: center;
+        font-size: 34px;
+        margin: 0 0 15px;
+    }
+
+    .blog-intro {
+        max-width: 800px;
+        margin: 0 auto 45px;
+        text-align: center;
+        color: #666;
+        font-size: 17px;
+    }
+
+
+    /* BLOG GRID */
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        align-items: stretch;
+    }
+
+
+    /* BLOG CARD */
+
+    .article-card {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 14px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .article-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+    }
+
+
+    /* CATEGORY LABEL */
+
+    .article-label {
+        display: inline-block;
+        width: fit-content;
+        margin-bottom: 15px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        background: #e9f7f8;
+        color: #087f8c;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+
+    /* BLOG TITLE */
+
+    .article-card h3 {
+        margin: 0 0 15px;
+        font-size: 22px;
+        line-height: 1.35;
+    }
+
+    .article-card h3 a {
+        color: #222;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .article-card h3 a:hover {
+        color: #087f8c;
+    }
+
+
+    /* BLOG DESCRIPTION */
+
+    .article-card p {
+        margin: 0 0 25px;
+        color: #666;
+        font-size: 15.5px;
+        line-height: 1.7;
+    }
+
+
+    /* READ MORE */
+
+    .read-more {
+        display: inline-block;
+        margin-top: auto;
+        color: #087f8c;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+        padding: 80px 7%;
+        text-align: center;
+        color: #fff;
+
+        background:
+            linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+            url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1800&q=85")
+            center/cover no-repeat;
+    }
+
+    .cta h2 {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .cta p {
+        max-width: 700px;
+        margin: 0 auto 25px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 13px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 5px;
+    }
+
+    .btn-primary {
+        background: #087f8c;
+        color: #fff;
+    }
+
+    .btn-secondary {
+        background: #fff;
+        color: #222;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        opacity: 0.9;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        padding: 35px 7%;
+        text-align: center;
+        background: #202020;
+        color: #fff;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .hero h1 {
-            font-size: 48px;
-            line-height: 1.15;
-            margin: 0 0 18px;
+            font-size: 42px;
+        }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 650px) {
+
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        nav a {
+            margin: 0;
+        }
+
+        .hero {
+            min-height: 380px;
+            padding: 60px 6%;
+        }
+
+        .hero h1 {
+            font-size: 32px;
         }
 
         .hero p {
-            font-size: 18px;
-            margin: auto;
+            font-size: 16px;
         }
-
-        /* BLOG SECTION */
 
         .blog-section {
-            padding: 80px 7%;
+            padding: 55px 6%;
         }
 
-        .blog-container {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .blog-container h2 {
-            font-size: 34px;
-            margin-bottom: 15px;
-        }
-
-        .blog-container p {
-            color: #666;
-            font-size: 17px;
-        }
-
-        .coming-soon {
-            margin-top: 40px;
-            padding: 50px 30px;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            background: #f7f9fa;
-        }
-
-        .coming-soon h3 {
-            font-size: 25px;
-            margin-top: 0;
-        }
-
-        .coming-soon p {
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        /* CTA */
-
-        .cta {
-            padding: 80px 7%;
-            text-align: center;
-            color: #fff;
-
-            background:
-                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-                url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1800&q=85")
-                center/cover no-repeat;
-        }
-
+        .blog-container > h2,
         .cta h2 {
-            font-size: 34px;
-            margin-bottom: 15px;
+            font-size: 28px;
         }
 
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 25px;
+        .blog-grid {
+            grid-template-columns: 1fr;
+            gap: 22px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 13px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 5px;
+        .article-card {
+            padding: 25px;
         }
 
-        .btn-primary {
-            background: #087f8c;
-            color: #fff;
+        .article-card h3 {
+            font-size: 21px;
         }
-
-        .btn-secondary {
-            background: #fff;
-            color: #222;
-        }
-
-        /* FOOTER */
-
-        footer {
-            padding: 35px 7%;
-            text-align: center;
-            background: #202020;
-            color: #fff;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 850px) {
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 0 7px;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            .hero {
-                min-height: 380px;
-                padding: 60px 6%;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .blog-section {
-                padding: 55px 6%;
-            }
-
-            .blog-container h2,
-            .cta h2 {
-                font-size: 28px;
-            }
-
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-            }
-
-            nav a {
-                margin: 0;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
@@ -294,29 +407,52 @@
             <article class="article-card">
 
     <span class="article-label">
-        Dubai Visa Guide
+        Kenya Travel &amp; Visa Guide
     </span>
 
     <h2>
-        <a href="blogs/apply-transit-visa-dubai-fastest-way.html">
-            Flight Countdown? The Absolute Fastest Way to Apply for a Dubai Transit Visa
+        <a href="blogs/kenya-tourist-visa-for-indians.html">
+            Planning Kenya From India? Check Your Visa Before the Safari Begins
         </a>
     </h2>
 
     <p>
-        Need to apply for a Dubai transit visa quickly? Explore 48-hour and
-        96-hour options, required documents, application steps and practical
-        timing tips before your flight.
+        Planning a Kenya safari from India? Understand the Kenya eTA,
+        required documents, application steps, processing time and
+        practical travel tips before your journey.
     </p>
 
     <a class="read-more"
-       href="blogs/apply-transit-visa-dubai-fastest-way.html">
-        Read the Full Article →
+       href="blogs/kenya-tourist-visa-for-indians.html">
+        Read Full Article →
     </a>
 
 </article>
 
-           
+            <article class="article-card">
+
+                <span class="article-label">
+                    Dubai Visa Guide
+                </span>
+
+                <h3>
+                    <a href="blogs/apply-transit-visa-dubai-fastest-way.html">
+                        Flight Countdown? The Absolute Fastest Way to Apply for a Dubai Transit Visa
+                    </a>
+                </h3>
+
+                <p>
+                    Need to apply for a Dubai transit visa quickly? Explore
+                    48-hour and 96-hour options, required documents,
+                    application steps and practical timing tips before your flight.
+                </p>
+
+                <a class="read-more"
+                   href="blogs/apply-transit-visa-dubai-fastest-way.html">
+                    Read Full Article →
+                </a>
+
+            </article>
 
 
             <!-- BLOG 2 -->
@@ -329,16 +465,14 @@
 
                 <h3>
                     <a href="blogs/7-days-dubai-family-tour-october.html">
-                        Why October is the Best Month for a
-                        7-Day Dubai Family Tour?
+                        Why October is the Best Month for a 7-Day Dubai Family Tour?
                     </a>
                 </h3>
 
                 <p>
                     Planning a Dubai family holiday in October?
                     Explore weather, a practical 7-day itinerary,
-                    attractions, packing tips and useful family
-                    travel advice.
+                    attractions, packing tips and useful family travel advice.
                 </p>
 
                 <a class="read-more"
@@ -359,15 +493,14 @@
 
                 <h3>
                     <a href="blogs/greece-tourist-visa-for-indians.html">
-                        Is Greece the Right Choice for Your First
-                        European Trip From India?
+                        Is Greece the Right Choice for Your First European Trip From India?
                     </a>
                 </h3>
 
                 <p>
                     Planning your first Europe trip from India?
-                    Explore Greece's visa requirements, itinerary
-                    ideas, documents and practical travel tips.
+                    Explore Greece's visa requirements, itinerary ideas,
+                    documents and practical travel tips.
                 </p>
 
                 <a class="read-more"
@@ -376,7 +509,6 @@
                 </a>
 
             </article>
-
 
         </div>
 
